@@ -18,7 +18,7 @@ public class PropertiesConfig {
 
         try (InputStream input = getClass().getClassLoader().getResourceAsStream(fileName)) {
             if (input == null) {
-                System.out.println("Sorry, unable to find application.properties");
+                System.out.println("Sorry, unable to find " + fileName);
                 return;
             }
             props.load(input);
